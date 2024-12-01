@@ -1,4 +1,10 @@
 package io.github.thesquidborn.ivbs;
 
-public class IvysVeryBalancedStuffClient {
+import net.fabricmc.api.ClientModInitializer;
+
+public class IvysVeryBalancedStuffClient implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+
+    }
 }

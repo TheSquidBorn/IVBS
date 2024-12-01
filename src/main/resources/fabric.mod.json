@@ -5,7 +5,7 @@
 	"name": "Ivy's Very Balanced Stuff",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Ivy/Squid"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"io.github.thesquidborn.ivbs.IvysVeryBalancedStuff"
+		],
+		"client": [
+			"io.github.thesquidborn.ivbs.IvysVeryBalancedStuffClient"
 		],
 		"fabric-datagen": [
 			"io.github.thesquidborn.ivbs.IvysVeryBalancedStuffDataGenerator"
@@ -30,8 +33,5 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
