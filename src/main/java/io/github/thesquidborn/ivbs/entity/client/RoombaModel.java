@@ -1,6 +1,5 @@
 package io.github.thesquidborn.ivbs.entity.client;
 
-import io.github.thesquidborn.ivbs.entity.animation.ModAnimations;
 import io.github.thesquidborn.ivbs.entity.custom.RoombaEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;

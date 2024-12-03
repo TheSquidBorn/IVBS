@@ -4,7 +4,6 @@ import io.github.thesquidborn.ivbs.entity.ModEntities;
 import io.github.thesquidborn.ivbs.entity.custom.RoombaEntity;
 import io.github.thesquidborn.ivbs.item.ModItems;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

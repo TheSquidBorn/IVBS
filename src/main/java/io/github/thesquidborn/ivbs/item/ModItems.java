@@ -28,6 +28,10 @@ public class ModItems {
             "dynamite"
     );
 
+    public static final Item ROOMBA = register(new RoombaItem(new FabricItemSettings().maxCount(1)),
+            "roomba"
+    );
+
     // "Tools"
     public static final Item THE_BOOM_STICK = register(
             new BoomStickItem(ToolMaterials.WOOD, 1, 1.2f, new FabricItemSettings().rarity(Rarity.UNCOMMON)),
@@ -46,6 +50,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(IVBS_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(ModItems.THE_BOOM_STICK);
             itemGroup.add(ModItems.DYNAMITE);
+            itemGroup.add(ModItems.ROOMBA);
         });
     }
 }
