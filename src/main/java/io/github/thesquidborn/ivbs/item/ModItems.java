@@ -22,6 +22,12 @@ public class ModItems {
         return Registry.register(Registries.ITEM, itemID, item);
     }
 
+    // Items
+    public static final Item DYNAMITE = register(
+            new Item(new FabricItemSettings()),
+            "dynamite"
+    );
+
     // "Tools"
     public static final Item THE_BOOM_STICK = register(
             new BoomStickItem(ToolMaterials.WOOD, 1, 1.2f, new FabricItemSettings().rarity(Rarity.UNCOMMON)),
@@ -37,6 +43,9 @@ public class ModItems {
     public static void initialize() {
         // Register items in creative item tab
         Registry.register(Registries.ITEM_GROUP, IVBS_ITEM_GROUP_KEY, IVBS_ITEM_GROUP);
-        ItemGroupEvents.modifyEntriesEvent(IVBS_ITEM_GROUP_KEY).register(itemGroup -> itemGroup.add(ModItems.THE_BOOM_STICK));
+        ItemGroupEvents.modifyEntriesEvent(IVBS_ITEM_GROUP_KEY).register(itemGroup -> {
+            itemGroup.add(ModItems.THE_BOOM_STICK);
+            itemGroup.add(ModItems.DYNAMITE);
+        });
     }
 }
