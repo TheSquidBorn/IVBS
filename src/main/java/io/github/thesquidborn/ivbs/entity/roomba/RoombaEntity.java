@@ -1,6 +1,7 @@
-package io.github.thesquidborn.ivbs.entity.custom;
+package io.github.thesquidborn.ivbs.entity.roomba;
 
 import io.github.thesquidborn.ivbs.item.ModItems;
+import net.fabricmc.loader.impl.lib.sat4j.core.Vec;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -22,10 +23,13 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import org.joml.Vector3d;
 
 import java.util.List;
+import java.util.Vector;
 
 public class RoombaEntity extends AnimalEntity implements InventoryOwner {
     private final SimpleInventory inventory = new SimpleInventory(7);
@@ -72,14 +76,18 @@ public class RoombaEntity extends AnimalEntity implements InventoryOwner {
     }
 
     @Override
+    public SimpleInventory getInventory() {
+        return this.inventory;
+    }
+
+    @Override
     public void mobTick() {
         time++;
         super.mobTick();
 
         if(time >= 20) {
             time = 0;
-            Box box = new Box(this.getX() + 1, this.getY() + 1, this.getZ() + 1, this.getX() - 1, this.getY() - 1, this.getZ() - 1);
-            List<ItemEntity> itemArray = this.getWorld().getEntitiesByType(EntityType.ITEM, box, Entity::isOnGround);
+            List<ItemEntity> itemArray = this.getWorld().getEntitiesByType(EntityType.ITEM, this.getBoundingBox().expand(1), Entity::isOnGround);
 
             if(!itemArray.isEmpty()) {
                 InventoryOwner.pickUpItem(this, this, itemArray.get(0));
@@ -87,7 +95,7 @@ public class RoombaEntity extends AnimalEntity implements InventoryOwner {
         }
     }
 
-    // pick up
+    // Right click pickup
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         this.dropInventory();
@@ -109,6 +117,7 @@ public class RoombaEntity extends AnimalEntity implements InventoryOwner {
         return SoundEvents.ENTITY_DOLPHIN_DEATH;
     }
 
+    // Persistence
     @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
@@ -119,10 +128,5 @@ public class RoombaEntity extends AnimalEntity implements InventoryOwner {
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
         this.readInventory(nbt);
-    }
-
-    @Override
-    public SimpleInventory getInventory() {
-        return this.inventory;
     }
 }

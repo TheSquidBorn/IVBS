@@ -1,4 +1,4 @@
-package io.github.thesquidborn.ivbs.entity.client;
+package io.github.thesquidborn.ivbs.entity;
 
 import io.github.thesquidborn.ivbs.IvysVeryBalancedStuff;
 import net.minecraft.client.render.entity.model.EntityModelLayer;

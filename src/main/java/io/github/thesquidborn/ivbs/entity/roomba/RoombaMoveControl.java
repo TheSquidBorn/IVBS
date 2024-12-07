@@ -1,4 +1,4 @@
-package io.github.thesquidborn.ivbs.entity.custom;
+package io.github.thesquidborn.ivbs.entity.roomba;
 
 import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.pathing.EntityNavigation;

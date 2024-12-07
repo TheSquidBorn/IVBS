@@ -2,7 +2,12 @@
   "item.ivbs.boom_stick": "THE BOOM STICK",
   "item.ivbs.dynamite": "Dynamite",
   "entity.ivbs.roomba": "Roomba",
+
   "item.ivbs.roomba": "Roomba",
 
-  "itemGroup.ivbs": "Ivy's Bullshit"
+  "itemGroup.ivbs": "Ivy's Bullshit",
+
+  "ivbs.midnightconfig.title": "IVBS",
+  "ivbs.midnightconfig.enableRoomba": "Enable Roomba, Beep Boop",
+  "ivbs.midnightconfig.enableBoomstick": "Enable Boom Stick"
 }

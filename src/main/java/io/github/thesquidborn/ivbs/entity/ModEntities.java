@@ -1,7 +1,8 @@
 package io.github.thesquidborn.ivbs.entity;
 
+import io.github.thesquidborn.ivbs.IVBSConfig;
 import io.github.thesquidborn.ivbs.IvysVeryBalancedStuff;
-import io.github.thesquidborn.ivbs.entity.custom.RoombaEntity;
+import io.github.thesquidborn.ivbs.entity.roomba.RoombaEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;

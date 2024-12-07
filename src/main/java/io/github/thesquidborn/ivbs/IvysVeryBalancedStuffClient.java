@@ -1,9 +1,9 @@
 package io.github.thesquidborn.ivbs;
 
 import io.github.thesquidborn.ivbs.entity.ModEntities;
-import io.github.thesquidborn.ivbs.entity.client.ModModelLayers;
-import io.github.thesquidborn.ivbs.entity.client.RoombaModel;
-import io.github.thesquidborn.ivbs.entity.client.RoombaRendrer;
+import io.github.thesquidborn.ivbs.entity.ModModelLayers;
+import io.github.thesquidborn.ivbs.entity.roomba.client.RoombaModel;
+import io.github.thesquidborn.ivbs.entity.roomba.client.RoombaRendrer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;

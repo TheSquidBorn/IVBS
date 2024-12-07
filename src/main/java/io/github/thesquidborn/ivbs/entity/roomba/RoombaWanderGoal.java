@@ -1,4 +1,4 @@
-package io.github.thesquidborn.ivbs.entity.custom;
+package io.github.thesquidborn.ivbs.entity.roomba;
 
 import net.minecraft.entity.ai.FuzzyTargeting;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;

@@ -1,10 +1,12 @@
 package io.github.thesquidborn.ivbs;
 
+import eu.midnightdust.lib.config.MidnightConfig;
 import io.github.thesquidborn.ivbs.entity.ModEntities;
-import io.github.thesquidborn.ivbs.entity.custom.RoombaEntity;
+import io.github.thesquidborn.ivbs.entity.roomba.RoombaEntity;
 import io.github.thesquidborn.ivbs.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.recipe.CraftingRecipe;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,10 +16,13 @@ public class IvysVeryBalancedStuff implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("WE WILL VOID WARRANTIES NOT YET WRITTEN");
-		LOGGER.info("WE SHALL DRAW THE BLOOD USED TO WRITE THEM");
+		LOGGER.info("Starting IVBS");
+		LOGGER.info("Prepare to void some warranties!");
+
+		MidnightConfig.init(MOD_ID, IVBSConfig.class);
 
 		ModItems.initialize();
+
 		FabricDefaultAttributeRegistry.register(ModEntities.ROOMBA, RoombaEntity.createRoombaAttributes());
 	}
 }

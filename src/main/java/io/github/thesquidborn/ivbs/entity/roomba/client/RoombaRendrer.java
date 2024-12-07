@@ -1,7 +1,8 @@
-package io.github.thesquidborn.ivbs.entity.client;
+package io.github.thesquidborn.ivbs.entity.roomba.client;
 
 import io.github.thesquidborn.ivbs.IvysVeryBalancedStuff;
-import io.github.thesquidborn.ivbs.entity.custom.RoombaEntity;
+import io.github.thesquidborn.ivbs.entity.ModModelLayers;
+import io.github.thesquidborn.ivbs.entity.roomba.RoombaEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;

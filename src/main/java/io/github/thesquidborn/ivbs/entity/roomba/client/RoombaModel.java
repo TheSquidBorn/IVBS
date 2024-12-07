@@ -1,6 +1,6 @@
-package io.github.thesquidborn.ivbs.entity.client;
+package io.github.thesquidborn.ivbs.entity.roomba.client;
 
-import io.github.thesquidborn.ivbs.entity.custom.RoombaEntity;
+import io.github.thesquidborn.ivbs.entity.roomba.RoombaEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
